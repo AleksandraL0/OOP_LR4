@@ -41,7 +41,7 @@ int Money::summa()
 void Bankomat::Getting(int SUM)
 {
 	int NUM10 = 0, NUM50 = 0, NUM100 = 0, NUM500 = 0, NUM1000 = 0, NUM5000 = 0;
-	if (SUM > this->summa()) cout << "В банкомате недостаточно денег" << endl;
+	if (SUM > this->summa()) cout << "There are no money in bankomat" << endl;
 	else
 	{
 		for (int i = 1; i <= this->num5000; i++)
@@ -107,7 +107,7 @@ void Bankomat::Getting(int SUM)
 	}
 	if (SUM != 0)
 	{
-		cout << "В банкомате недостаточно купюр, чтобы выдать, недостаток - " << SUM << endl;
+		cout << "There are no bills in bankomat to give out, not enough - " << SUM << endl;
 		this->num10 += NUM10;
 		this->num50 += NUM50;
 		this->num100 += NUM100;
@@ -126,5 +126,5 @@ void Bankomat::Refill(int NUM10, int NUM50, int NUM100, int NUM500, int NUM1000,
 	this->num500 += NUM500;
 	this->num1000 += NUM1000;
 	this->num5000 += NUM5000;
-	cout << "Пополнение на сумму " << NUM10 * 10 + NUM50 * 50 + NUM100 * 100 + NUM500 * 500 + NUM1000 * 1000 + NUM5000 * 5000 << " - успешно" << endl;
+	cout << "Refill for " << NUM10 * 10 + NUM50 * 50 + NUM100 * 100 + NUM500 * 500 + NUM1000 * 1000 + NUM5000 * 5000 << " - succesfully" << endl;
 }

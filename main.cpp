@@ -5,7 +5,6 @@ using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
 	system("color F1");
 	Bankomat Sber(5, 5, 5, 5, 5, 5);
 	int SUM;
@@ -13,7 +12,7 @@ int main()
 	Sber.Getting(570);
 	Sber.Getting(5340);
 	Sber.Getting(100);
-	cout << "Введите сумму для получения" << endl;
+	cout << "Input amount to get" << endl;
 	cin >> SUM;
 	Sber.Getting(SUM);
 	Sber.Refill(1, 0, 1, 1, 1, 1);
